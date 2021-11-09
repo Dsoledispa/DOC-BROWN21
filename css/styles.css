@@ -100,7 +100,7 @@ li a {
     font-size: 15px;
 }
 
-li a:hover:not(.active) {
+li a:hover {
     background-color: grey;
 }
 

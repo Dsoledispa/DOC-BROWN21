@@ -37,3 +37,9 @@ try{
     echo $e->getMessage();
 }
 ```
+
+## Logins
+```
+user: xaviergomez@docbrown.com,diegosoledispa@docbrown.com 
+pass: 1234
+```

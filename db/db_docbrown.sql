@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-11-2021 a las 19:45:09
+-- Tiempo de generación: 09-11-2021 a las 18:02:22
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.4.24
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `db_docbrown`
 --
+CREATE DATABASE IF NOT EXISTS `db_docbrown` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `db_docbrown`;
 
 -- --------------------------------------------------------
 
@@ -48,7 +50,16 @@ INSERT INTO `tbl_historial` (`id_historial`, `id_mesa`, `dia_historial`, `inicio
 (13, 3, '2021-11-05', '17:46:05', '17:46:25', 'Diego'),
 (15, 1, '2021-11-05', '19:17:56', '19:17:58', 'Xavi'),
 (16, 3, '2021-11-05', '19:32:48', '19:33:07', 'Xavi'),
-(17, 104, '2021-11-05', '19:40:42', '19:40:53', 'Xavi');
+(17, 104, '2021-11-05', '19:40:42', '19:40:53', 'Xavi'),
+(18, 2, '2021-11-08', '15:15:54', '15:16:14', 'Xavi'),
+(19, 104, '2021-11-08', '15:50:21', '15:50:59', 'Xavi'),
+(20, 1, '2021-11-09', '16:41:11', '16:41:37', 'Xavi'),
+(21, 9, '2021-11-09', '17:06:41', '17:09:14', 'Xavi'),
+(22, 105, '2021-11-09', '17:09:17', '17:09:20', 'Xavi'),
+(25, 1, '2021-11-09', '17:41:16', '17:41:24', 'Xavi'),
+(26, 1, '2021-11-09', '17:43:57', '17:43:58', 'Xavi'),
+(27, 2, '2021-11-09', '17:53:20', '17:53:21', 'Xavi'),
+(28, 105, '2021-11-09', '17:55:56', '17:55:59', 'Xavi');
 
 -- --------------------------------------------------------
 
@@ -80,7 +91,7 @@ CREATE TABLE `tbl_mesa` (
   `id_mesa` int(11) NOT NULL,
   `mesa` int(11) DEFAULT NULL,
   `silla` int(11) DEFAULT NULL,
-  `disponibilidad` enum('si','no') DEFAULT NULL,
+  `disponibilidad` enum('si','no','mantenimiento') DEFAULT NULL,
   `id_localizacion` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -125,16 +136,21 @@ INSERT INTO `tbl_mesa` (`id_mesa`, `mesa`, `silla`, `disponibilidad`, `id_locali
 CREATE TABLE `tbl_usuario` (
   `nombre` varchar(45) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `contraseña` varchar(100) NOT NULL
+  `contraseña` varchar(100) NOT NULL,
+  `tipo` enum('camarero','mantenimiento') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `tbl_usuario`
 --
 
-INSERT INTO `tbl_usuario` (`nombre`, `email`, `contraseña`) VALUES
-('Diego', 'diegosoledispa@docbrown.com', '81dc9bdb52d04dc20036dbd8313ed055'),
-('Xavi', 'xaviergomez@docbrown.com', '81dc9bdb52d04dc20036dbd8313ed055');
+INSERT INTO `tbl_usuario` (`nombre`, `email`, `contraseña`, `tipo`) VALUES
+('Agnes', 'agnesplans@docbrown.com', '81dc9bdb52d04dc20036dbd8313ed055', 'mantenimiento'),
+('Danny', 'dannylarrea@docbrown.com', '81dc9bdb52d04dc20036dbd8313ed055', 'mantenimiento'),
+('Diego', 'diegosoledispa@docbrown.com', '81dc9bdb52d04dc20036dbd8313ed055', 'camarero'),
+('Ignasi', 'ignasiromero@docbrown.com', '81dc9bdb52d04dc20036dbd8313ed055', 'mantenimiento'),
+('Sergio', 'sergiojimenez@docbrown.com', '81dc9bdb52d04dc20036dbd8313ed055', 'mantenimiento'),
+('Xavi', 'xaviergomez@docbrown.com', '81dc9bdb52d04dc20036dbd8313ed055', 'camarero');
 
 --
 -- Índices para tablas volcadas
@@ -175,7 +191,7 @@ ALTER TABLE `tbl_usuario`
 -- AUTO_INCREMENT de la tabla `tbl_historial`
 --
 ALTER TABLE `tbl_historial`
-  MODIFY `id_historial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_historial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT de la tabla `tbl_localizacion`
