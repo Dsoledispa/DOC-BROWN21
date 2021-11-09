@@ -1,3 +1,9 @@
+## Integrantes del equipo
+```
+Xavier Gómez
+Diego Soledispa
+```
+
 # DOC-BROWN21
 ## Conexión a base de datos
 ### Necesitas crear el archivo connection.php y añadir las sentencias de la siguiente manera como demostraré a continuación que es con el metodo de mysql.
@@ -40,6 +46,6 @@ try{
 
 ## Logins
 ```
-user: xaviergomez@docbrown.com,diegosoledispa@docbrown.com 
+user: xaviergomez@docbrown.com, diegosoledispa@docbrown.com 
 pass: 1234
 ```
