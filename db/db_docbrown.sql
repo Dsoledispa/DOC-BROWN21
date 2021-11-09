@@ -136,21 +136,20 @@ INSERT INTO `tbl_mesa` (`id_mesa`, `mesa`, `silla`, `disponibilidad`, `id_locali
 CREATE TABLE `tbl_usuario` (
   `nombre` varchar(45) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `contraseña` varchar(100) NOT NULL,
-  `tipo` enum('camarero','mantenimiento') NOT NULL
+  `contraseña` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `tbl_usuario`
 --
 
-INSERT INTO `tbl_usuario` (`nombre`, `email`, `contraseña`, `tipo`) VALUES
-('Agnes', 'agnesplans@docbrown.com', '81dc9bdb52d04dc20036dbd8313ed055', 'mantenimiento'),
-('Danny', 'dannylarrea@docbrown.com', '81dc9bdb52d04dc20036dbd8313ed055', 'mantenimiento'),
-('Diego', 'diegosoledispa@docbrown.com', '81dc9bdb52d04dc20036dbd8313ed055', 'camarero'),
-('Ignasi', 'ignasiromero@docbrown.com', '81dc9bdb52d04dc20036dbd8313ed055', 'mantenimiento'),
-('Sergio', 'sergiojimenez@docbrown.com', '81dc9bdb52d04dc20036dbd8313ed055', 'mantenimiento'),
-('Xavi', 'xaviergomez@docbrown.com', '81dc9bdb52d04dc20036dbd8313ed055', 'camarero');
+INSERT INTO `tbl_usuario` (`nombre`, `email`, `contraseña`) VALUES
+('Agnes', 'agnesplans@docbrown.com', '81dc9bdb52d04dc20036dbd8313ed055'),
+('Danny', 'dannylarrea@docbrown.com', '81dc9bdb52d04dc20036dbd8313ed055'),
+('Diego', 'diegosoledispa@docbrown.com', '81dc9bdb52d04dc20036dbd8313ed055'),
+('Ignasi', 'ignasiromero@docbrown.com', '81dc9bdb52d04dc20036dbd8313ed055'),
+('Sergio', 'sergiojimenez@docbrown.com', '81dc9bdb52d04dc20036dbd8313ed055'),
+('Xavi', 'xaviergomez@docbrown.com', '81dc9bdb52d04dc20036dbd8313ed055');
 
 --
 -- Índices para tablas volcadas
