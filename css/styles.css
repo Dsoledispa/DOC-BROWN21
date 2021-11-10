@@ -210,6 +210,10 @@ label {
     border-radius: 5px;
 }
 
+.filtrar:hover {
+    background-color: #cccccc;
+}
+
 button {
     padding: 0 16px;
     border-radius: 5px;
