@@ -28,6 +28,7 @@ if ($_SESSION['email']=="") {
         <div class="row padding-top padding-lat">
             <div class="fondo">
                 <button type="submit"><a type='button' href='vistahistorial.php'>Ver historial de reservas</a></button>
+                <button type="submit"><a type='button' href='menu.php'>Volver al menu</a></button>
                 <form action="zona.admin.php" method="post">
                     <div class="column-2">
                         <label for="localizacion">Ubicacion</label><br>
@@ -65,6 +66,10 @@ if ($_SESSION['email']=="") {
                     </div>
                 </form>
             </div>
+                <button type="submit">
+                    <a type='button' href='cambiarterrazas.php'>Terrazas llenas</a></button>
+                <button type="submit"><a type='button' href='cambiarcomedor.php'>Comedor lleno</a></button>
+                <button type="submit"><a type='button' href='cambiarsalaprivada.php'>Sala Privada lleno</a></button>
         </div><br>
         <!--nav-->
        <?php
@@ -108,9 +113,11 @@ if ($_SESSION['email']=="") {
                     if ($row['disponibilidad']=="si") {
                         echo "<td class='gris'><i class='fas fa-check green'></i></td>";
                         echo "<td><button type='submit'><a type='button' href='../proceses/agregareserva.php?idmesa={$row['id_mesa']}'>Añadir reserva</a></button></td>";
+                        echo "<td><button type='submit'><a type='button' href='../proceses/modificarsilla.php?idmesa={$row['id_mesa']}'>Añadir reserva</a></button></td>";
                     }else{
                         echo "<td class='gris'><i class='fas fa-times red'></i></td>";
                         echo "<td><button type='submit'><a type='button' href='../proceses/eliminareserva.php?idmesa={$row['id_mesa']}'>Quitar reserva</a></button></td>";
+                        echo "<td><button type='submit'><a type='button' href='../proceses/modificarsilla.php?idmesa={$row['id_mesa']}'>Añadir reserva</a></button></td>";
                     }            
                 echo "</tr>";
             }
@@ -146,9 +153,11 @@ if ($_SESSION['email']=="") {
                         if ($localizacion['disponibilidad']=="si") {
                             echo "<td class='gris'><i class='fas fa-check green'></i></td>";
                             echo "<td><button type='submit'><a type='button' href='../proceses/agregareserva.php?idmesa={$localizacion['id_mesa']}'>Añadir reserva</a></button></td>";
+                            echo "<td><button type='submit'><a type='button' href='../proceses/modificarsilla.php?idmesa={$localizacion['id_mesa']}'>Modificar silla</a></button></td>";
                         }else{
                             echo "<td class='gris'><i class='fas fa-times red'></i></td>";
                             echo "<td><button type='submit'><a type='button' href='../proceses/eliminareserva.php?idmesa={$localizacion['id_mesa']}'>Quitar reserva</a></button></td>";
+                            echo "<td><button type='submit'><a type='button' href='../proceses/modificarsilla.php?idmesa={$localizacion['id_mesa']}'>Modificar silla</a></button></td>";
                         }
                     echo "</tr>";
                 }
