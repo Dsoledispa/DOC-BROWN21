@@ -44,7 +44,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                  }   
                 //print_r($comprobacion);
                 $_SESSION['email']=$email;
-                header("location:../view/zona.admin.php");
+                header("location:../view/menu.php");
             }else {
                 header("location: ../view/login.html");
             }
