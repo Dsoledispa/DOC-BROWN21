@@ -44,7 +44,9 @@ Se recomienta tener acceso a internet en todo momento para poder visualizar corr
 
 ## Despliegue 📦
 
-_Agrega notas adicionales sobre como hacer deploy_
+Si se desea usar un servicio de hosting, a continuacion de dejamos un ejemplo con el servicio gratuito infinity free.
+Links en Construido con 🛠️ 
+Creamos una cuenta con la direccion de correo que queramos y llegaremos a la pagina de crear la cuenta de hosting.
 
 ## Construido con 🛠️
 
