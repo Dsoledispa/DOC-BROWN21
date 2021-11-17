@@ -6,18 +6,18 @@ Página web que sirve para reservar mesas de un restaurante y tener un registro 
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-Mira **Deployment** (Despliegue) para conocer como desplegar el proyecto.
-
 
 ### Pre-requisitos 📋
 
 Antes de nada hay que descargar e instalar los programas Xampp y Visual Studio Code. Respecto a Xampp hay que descargarse la version que coincida con el sistema operativo que tienes.
+Links en Construido con 🛠️ 
 
 ### Instalación 🔧
 
-Una vez hecho el paso anterior hay que crear una carpeta llamada www (simplemente por tenerlo organizado) dentro de /xampp/htdocs/ y copiar la carpeta del proyecto a este directorio.
+Una vez hecho el paso anterior hay que crear una carpeta llamada www (simplemente por tenerlo organizado) dentro de /xampp/htdocs/ .
+Se descomprime el archivo y se copia en la carpeta del proyecto a este ultimo directorio.
 Ejecutamos XAMPP control panel e iniciamos los modulos de apache (servidor web) y MYSQL (gestion de base de datos).
-Dentro del navegador web preferido escribimos en la barra web localhost si ejecutamos el proyecto desde la propia maquina o la direccion ip del servidor web que tengas.
+Dentro del navegador web preferido escribimos en la barra de direccion web localhost, si ejecutamos el proyecto desde la propia maquina o la direccion ip del servidor web que tengas.
 Una vez dentro de la pagina web, arriba a la derecha clicamos a phpMyAdmin para acceder a este servicio de Xampp, donde pondremos la base de datos del proyecto.
 Ahora procederemos a importar la base de datos, desde el menu importar ubicado en la barra superior derecha. Seleccionamos el archivo .sql ubicado en la carpeta db dentro del proyecto, le damos a continuar y se guardara. La base de datos esta lista.
 
@@ -61,7 +61,7 @@ Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](ht
 
 ## Versionado 📌
 
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
+Para todas las versiones disponibles, mira la siguiente pagina(https://github.com/Dsoledispa/DOC-BROWN21/tags).
 
 ## Autores ✒️
 
@@ -70,13 +70,13 @@ _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios
 * **Xavier Gómez**  - [Xavier Gómez](https://https://github.com/xaviermireia1)
 * **Diego Soledispa** - [Diego Soledispa](https://github.com/Dsoledispa)
 
+
+También puedes mirar la lista de todos los [contribuyentes](https://github.com/Dsoledispa/DOC-BROWN21/contributors) quíenes han participado en este proyecto. 
 ## Licencia 📄
 
 Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
 ## Expresiones de Gratitud 🎁
 
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* etc.
+* Invita una cerveza 🍺 o un café ☕ a alguien del equipo si te ha sido util este proyecto. 
+* Gracias por su atencion 🤓.
