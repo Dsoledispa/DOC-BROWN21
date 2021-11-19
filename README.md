@@ -44,9 +44,11 @@ Se recomienta tener acceso a internet en todo momento para poder visualizar corr
 
 ## Despliegue 📦
 
-Si se desea usar un servicio de hosting, a continuacion de dejamos un ejemplo con el servicio gratuito infinity free.
+Si se desea usar un servicio de hosting, a continuacion de dejamos un ejemplo con el servicio gratuito 000webhost.
 Links en Construido con 🛠️ 
-Creamos una cuenta con la direccion de correo que queramos y llegaremos a la pagina de crear la cuenta de hosting.
+Creamos una cuenta con la direccion de correo que queramos y y confirmamos el correo. Ahora seguimos las instrucciones del hosting (queremos subir nuestra pagina web).
+Dentro de la zona files subimos el proyecto, haciendo un copia y pega directamente los archivos y carpetas del proyecto, no el proyecto en si dentro de public.html.
+Volvemos al inicio del hosting, y vamos a manage website. Accedemos a tools y a database manager. Creamos la base de datos, y una vez creada con el phpmyadmin del hosting pegamos las tablas de nuestra base de datos. Ahora accedemos a file manager otra vez, dentro de public, services, abrimos connection.php. Cambiamos los datos de la base de datos por los del hosting (los datos estan en el database manager.) La pagina web estara lista para ser usada.
 
 ## Construido con 🛠️
 
